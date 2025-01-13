@@ -5,5 +5,6 @@ export default function requireAuthentication(Component, user, isLoggedIn, handl
   function AuthHOC(props) {
     return isLoggedIn ? <Component user={user} {...props} /> : <Hero handleLogIn={handleLogIn} />;
   }
+  
   return AuthHOC;
 }
